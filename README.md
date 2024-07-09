@@ -9,7 +9,7 @@ sudo apt-get install git gitk vim
 ```
 RPi.GPIO のインストールにpython3-devが必要
 ```bash
-$ sudo apt-get install python3-dev
+sudo apt-get install python3-dev
 ```
 最近の Raspbian OS は仮想環境じゃないと pip が動かないので venv をインストール
 ```bash
