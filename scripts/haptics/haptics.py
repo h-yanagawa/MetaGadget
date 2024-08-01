@@ -3,7 +3,7 @@ import pygame
 import RPi.GPIO as GPIO
 import sys
 from metagadget import MetaGadget
-
+import time
 # GPIO設定
 LED_PIN = 17
 GPIO.setwarnings(False)
@@ -47,6 +47,8 @@ def main():
                 print(f"{files[file_index - 1]} を音量 {volume} で再生します。")
                 GPIO.output(LED_PIN, GPIO.HIGH)
                 play_audio_file(file_path, volume)
+                time.sleep(3)
+                stop_audio()
             else:
                 print("音量は0から100の範囲で入力してください。")
         else:
