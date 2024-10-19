@@ -16,7 +16,7 @@ class MetaGadget:
     def dispatch_request(self, request):
         data = request.get_json()
         _res = self._dispatch_request(data['request'])
-        
+
         res = {
             "verify": VERIFY,
             "response": _res
@@ -29,14 +29,14 @@ class MetaGadget:
         request = Request(environ)
         response = self.dispatch_request(request)
         return response(environ, start_response)
-    
+
     def receive(self, func):
         self._dispatch_request = func
         return func
 
     def __call__(self, environ, start_response):
         return self.wsgi_app(environ, start_response)
-        
+
     def run(self):
         if not os.environ.get("WERKZEUG_RUN_MAIN"):
             print("Starting ngrok")
@@ -46,6 +46,7 @@ class MetaGadget:
 
 if __name__ == '__main__':
     app = MetaGadget()
+
     @app.receive
     def handle(request):
         print(f'Hello World {request}')
