@@ -1,6 +1,6 @@
 [project]
 name = "metagadget"
-version = "0.0.3"
+version = "0.0.4"
 authors = [
   { name="Ryutaro Kurai", email="ryu.kurai@gmail.com" },
   { name="Takefumi Hiraki", email="t.hiraki@cluster.mu" },
