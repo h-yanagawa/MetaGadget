@@ -1,30 +1,15 @@
 # MetaGadget
+
+## Introduction
+
+This library connects the metaverse service Cluster with IoT devices that you create.
+
+It can run on Mac, Windows, or Linux - any environment where Python runs.
+For detailed usage instructions, please see the Getting Started guide.
+
 ## はじめに
-- Raspberry Pi Zero 2 W, Zero Wでの動作を想定しています。
-- OSはRaspbian OS Lite を使用してください。 
-## 環境構築
-gitとエディタのインストール
-```bash
-sudo apt-get install git gitk vim
-```
-RPi.GPIO のインストールにpython3-devが必要
-```bash
-sudo apt-get install python3-dev
-```
-最近の Raspbian OS は仮想環境じゃないと pip が動かないので venv をインストール
-```bash
-python -m venv venv
-```
-仮想環境構築
-```bash
-. venv/bin/activate
-```
-pipで必要パッケージのインストール
-```bash
-pip install -U Flask ngrok RPi.GPIO
-```
-## 使い方
-起動時に ngrok の TOKEN と DOMAIN 名を渡す
-```bash
-NGROK_DOMAIN="YOUR.ngrok-free.app" NGROK_AUTHTOKEN="YOUR TOKEN" python your_app.py
-```
+
+このライブラリは、メタバースサービスの Cluster と、あなたが作った IoT デバイスをつなぐためのライブラリです。
+
+python が動く環境であれば、Mac, Windows, Linux を問わず動かすことができます。
+詳しい使い方は、Getting Started を見てください。
